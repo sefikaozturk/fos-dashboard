@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "arcgis-fos",
+  "private_key_id": "a2e12f56c5d8802bbd25902e11129037112c05ea",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDzEnt3pAvvPBML\n75pVziniyIGCMSpCJN1vlACJm2wAnyC92li9AKHz7w0A7q5YMzSBhPX+Ap9cB/7W\n3mBoA67ZYRo3pt2jHoS4VWpH9a7vOKNzwjt7S+ITyUgk0ii1tZ843Re7TqK4DUte\nMrnADNtAW4M2FDzCxXRcYDRVW35DTsAEXa0+3XsnnHRvf4BrXvTpk273bi+MM4oe\nlwoobFbXmQRkZs+KH0uDLwgbmQceUQ2dMAKmMMAc9ERgr3I6Pr0FbC4/iBZcrXkf\negRmpeFNja9U5im6wM6wVPNxvv7Vl+vLjVAVZAlt6HkbnCbyRl4azvKnF6d8Y4qG\nwFXjn+zhAgMBAAECggEAD9BzhPirfXCbTUr/mmEz5hklHTslTzFb0MnAcTN8nDET\ngxaaGw3X+5QMH16SrD1Z8f/xtd7QzxQxbHmtAbIU+vfvfzsVhL/UYwkiRYqX9jYT\n+FDk6CQrPMil2h4W35+bO4AIQ7udfZEBMXXmZ4wj6vTT6BL6qFy1XISL0xkv8Uv6\ntMVksYA3LfLsbmPojIBLRfsMMfYhVXfLmpbMxzzIYWNZJ+epEVmt40UOCkMN0Ek7\nvMFBx2JIEFB7gnnxaBi0jzaIbbeRn+kVhT++Z4wGqdLm/PGaYytBAMBCB4NwrWOf\nsFG4jgem2awiWXt1z0c61AxqNAMxsFI+0oz4SSKrywKBgQD7Hz5GTJeSBs8pem/5\n0+OoM3fSltv8COzjgfbbSRYBO4obdvww5qbTJAVjm71XoidnBYp1Cx60TEEoCTn2\nwuCsGPL5u+1YzcPzoUAYeYWTFbuOgBCtqTsBZMdT5pTCUFGdSqaJnt9J1Fhysjc+\nupTWYlVjVnSJ7sll8w5bTcNH9wKBgQD3yzWhCANTW9red2WWKFE3GbwYzJ+Sh65g\nGhhFUzh1HsqU9No5tfzxoqQTRiTo2krZ9Qn/cWESX7Or8IDd61Z2MiTpIQd2T+r3\ncFI38HZri+mnuF6bF70CHrKhh1WS4NE+hr2iryTNShxbXwI5W2zCEpmgQrbOcx5V\nAFb/jWir5wKBgQCxyjHt1YYuBZIfvKaQirqQODgqKVKAAtWsUTQzlm/02XFy9m+g\nM3yC2erS1c1cwNoCr0KSkRfg8Gfk73tRQDGOxm8n7iwhBjUoRM67RTYTp3xNbE/i\nk4DKAM66kPJbDEBsCxETOB7AB43DTnecer6rdZ0conYJvbxq6IUOkWSjiwKBgEsV\nJfDfTrKpeI5EO2HeYY2CnL4e8pMhzbKM9aG777V9WQD9mEo4XKaTE4hLjs+HpXqZ\nhygBoNpCaVzGCSY1MwOpegmx2mL9IENNo3wTvq4jvO73LKNt8/V6e8H6EfHpcT2y\n8i8jRtF1jVYaWcArda7wl+A5ls7DjwNOkQ3qOTctAoGAbVTR4Y8RStGwHdBI2Xsa\n07Ye3xoX+ksuruamLgd/FH7KRWsGfKL3si85iHwJMT4/N+m4oECnvHwXQppeLrZt\nGHXnUeEfbRJiFD9p1v6iVcehHob5XT/zJfp3zxBL03xrNYrRshm8URwWJ8T3OanZ\nopxhUzPFIpOU/b9VrIKLxb8=\n-----END PRIVATE KEY-----\n",
+  "client_email": "arcgis-fos@arcgis-fos.iam.gserviceaccount.com",
+  "client_id": "104796989259565858977",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/arcgis-fos%40arcgis-fos.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
