@@ -114,7 +114,7 @@ elif page == "Invasive Plant Removal":
     st.metric("Most Common Species", f"{most_common_species} ({top_species_count})")
 
     st.subheader("Most Common Species Chart")
-    species_chart = wildspotter_df["Species Name"].value_counts().reset_index()
+    species_chart = wildspotter_df["CommonName"].value_counts().reset_index()
     species_chart.columns = ["Species", "Count"]
     bar_chart = alt.Chart(species_chart.head(10)).mark_bar().encode(
         x=alt.X("Species", sort="-y"),
