@@ -4,6 +4,7 @@ import altair as alt
 import gspread
 from google.oauth2 import service_account
 from google.oauth2.service_account import Credentials
+from gspread.auth import service_account_from_dict
 
 # === Google Sheets Authentication using Streamlit Secrets ===
 scope = [
