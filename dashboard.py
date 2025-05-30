@@ -36,7 +36,7 @@ wildspotter_sheet = load_ws_sheet()
 def load_str_sheet():
     return client.open_by_url("https://docs.google.com/spreadsheets/d/1S-g238RAuZk4ZSa-gUoQNonHlAv6KXCXQDRS88tIzwE").worksheet("Form Responses 1")
 
-strategic_sheet = load_ws_sheet()
+strategic_sheet = load_str_sheet()
 
 # === Volunteer Summary Processing ===
 summary_df = pd.DataFrame(summary_sheet.get_all_records())
