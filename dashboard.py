@@ -11,10 +11,29 @@ creds = service_account.Credentials.from_service_account_info(creds_dict, scopes
 client = gspread.authorize(creds)
 
 # === Load Sheets ===
-summary_sheet = client.open_by_url("https://docs.google.com/spreadsheets/d/1h1kYv7ffSS1tJ3GCn2UTzEuK12Nw_Jq7s17gV3x8QAE").worksheet("Summary")
-satisfaction_sheet = client.open_by_url("https://docs.google.com/spreadsheets/d/1NwQmL6JlD5AdsScnGcqvfx1-jlC6syQWZxhZ0mRMmfA").sheet1
-wildspotter_sheet = client.open_by_url("https://docs.google.com/spreadsheets/d/1lutxDE5-9mvywh6zhGUCsImkGO0USor05lBsTgRXJ3s").sheet1
-strategic_sheet = client.open_by_url("https://docs.google.com/spreadsheets/d/1S-g238RAuZk4ZSa-gUoQNonHlAv6KXCXQDRS88tIzwE").sheet1
+@st.cache_data(ttl=3600)
+def load_summary_sheet():
+    return client.open_by_url("https://docs.google.com/spreadsheets/d/1h1kYv7ffSS1tJ3GCn2UTzEuK12Nw_Jq7s17gV3x8QAE").worksheet("Summary")
+
+summary_sheet = load_summary_sheet() #volunteer stuff
+
+@st.cache_data(ttl=3600)
+def load_sat_sheet():
+    return client.open_by_url("https://docs.google.com/spreadsheets/d/1NwQmL6JlD5AdsScnGcqvfx1-jlC6syQWZxhZ0mRMmfA").worksheet("Form Responses 1")
+
+satisfaction_sheet = load_sat_sheet()
+
+@st.cache_data(ttl=3600)
+def load_ws_sheet():
+    return client.open_by_url("https://docs.google.com/spreadsheets/d/1lutxDE5-9mvywh6zhGUCsImkGO0USor05lBsTgRXJ3s").worksheet("export")
+
+wildspotter_sheet = load_ws_sheet()
+
+@st.cache_data(ttl=3600)
+def load_str_sheet():
+    return client.open_by_url("https://docs.google.com/spreadsheets/d/1S-g238RAuZk4ZSa-gUoQNonHlAv6KXCXQDRS88tIzwE").worksheet("Form Responses 1")
+
+strategic_sheet = load_ws_sheet()
 
 # === Volunteer Summary Processing ===
 summary_df = pd.DataFrame(summary_sheet.get_all_records())
