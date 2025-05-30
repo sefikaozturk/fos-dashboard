@@ -38,8 +38,8 @@ monthly_value = {month_map[k]: v for k, v in monthly_value.items()}
 # === WildSpotter Summary ===
 wildspotter_df = pd.DataFrame(wildspotter_sheet.get_all_records())
 total_sightings = len(wildspotter_df)
-most_common_species = wildspotter_df["CommonName"].value_counts().idxmax()
-top_species_count = wildspotter_df["CommonName"].value_counts().max()
+most_common_species = wildspotter_df["Species Name"].value_counts().idxmax()
+top_species_count = wildspotter_df["Species Name"].value_counts().max()
 
 # === Satisfaction Summary ===
 satisfaction_df = pd.DataFrame(satisfaction_sheet.get_all_records())
@@ -114,7 +114,7 @@ elif page == "Invasive Plant Removal":
     st.metric("Most Common Species", f"{most_common_species} ({top_species_count})")
 
     st.subheader("Most Common Species Chart")
-    species_chart = wildspotter_df["CommonName"].value_counts().reset_index()
+    species_chart = wildspotter_df["Species Name"].value_counts().reset_index()
     species_chart.columns = ["Species", "Count"]
     bar_chart = alt.Chart(species_chart.head(10)).mark_bar().encode(
         x=alt.X("Species", sort="-y"),
