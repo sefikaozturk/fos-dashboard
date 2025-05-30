@@ -2,18 +2,11 @@ import streamlit as st
 import pandas as pd
 import altair as alt
 import gspread
-from google.oauth2 import service_account
-from google.oauth2.service_account import Credentials
 from gspread.auth import service_account_from_dict
 
 # === Google Sheets Authentication using Streamlit Secrets ===
-scope = [
-    "https://www.googleapis.com/auth/spreadsheets",
-    "https://www.googleapis.com/auth/drive"
-]
 creds_dict = st.secrets["gcp_service_account"]
-creds = Credentials.from_service_account_info(creds_dict, scopes=scope)
-client = gspread.authorize(creds)
+client = service_account_from_dict(creds_dict)
 
 # === Load Sheets ===
 @st.cache_data(ttl=3600)
@@ -138,7 +131,7 @@ elif page == "Invasive Plant Removal":
     st.metric("Most Common Species", f"{most_common_species} ({top_species_count})")
 
     st.subheader("Most Common Species Chart")
-    species_chart = wildspotter_df["CommonName"].value_counts().reset_index()
+    species_chart = wildspotter_df["Species Name"].value_counts().reset_index()
     species_chart.columns = ["Species", "Count"]
     bar_chart = alt.Chart(species_chart.head(10)).mark_bar().encode(
         x=alt.X("Species", sort="-y"),
